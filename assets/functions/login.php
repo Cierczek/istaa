@@ -31,6 +31,16 @@ function joints_login_footer() {
             resizeBox();
             jQuery(window).resize(resizeBox);
         });
+        
+        jQuery(document).ready(function () {
+            var a = location.pathname;
+           if( a == "/istaa/wp-login.php" ){ 
+                jQuery( ".login-home" ).addClass( "active");
+            }
+            else{
+                jQuery( ".login-home" ).removeClass( "active" );
+            } 
+        });
         </script>';
     return get_footer();
 }
@@ -46,44 +56,9 @@ function new_wp_login_title() {
 
 function hide_logo() {
     echo '<style type="text/css">                                                                   
-               form#loginform p label br, h1 a, p.forgetmenot, p#backtoblog { display:none!important; }
-                h1.login-title {
-                    font-size: 18px;
-                    text-align: center;
-                    font-weight: 400;
-                    font-family: "Roboto", sans-serif;
-                }
-                form#loginform p label input, form#lostpasswordform p label input{
-                    text-align:center;
-                }
-                .off-canvas-content {
-                    background:#F8F7F7;
-                }
-                p.submit {
-                    text-align: center;
-                }
-                input#wp-submit{
-                    border: 2px solid #000!important;
-                    padding: 10px 40px;
-                    color: #000!important;
-                    border-radius: 28px;
-                    font-size: 14px;
-                    font-weight: 700;
-                    background:#F8F7F7;
-                 }
+
             </style>';
 }
-
-// calling it only on the login page
-add_filter('login_message', 'new_wp_login_title');
-add_action('login_head', 'hide_logo');
-add_action('login_enqueue_scripts', 'joints_login_css', 10);
-add_filter('login_headerurl', 'joints_login_url');
-add_filter('login_headertitle', 'joints_login_title');
-add_filter('login_footer', 'joints_login_footer');
-
-
-add_filter('gettext', 'wpse17709_gettext', 10, 2);
 
 function wpse17709_gettext($custom_translation, $login_texts) {
 
@@ -102,3 +77,12 @@ function wpse17709_gettext($custom_translation, $login_texts) {
 
     return $translation;
 }
+
+// calling it only on the login page
+add_filter('login_message', 'new_wp_login_title');
+add_action('login_head', 'hide_logo');
+add_action('login_enqueue_scripts', 'joints_login_css', 10);
+add_filter('login_headerurl', 'joints_login_url');
+add_filter('login_headertitle', 'joints_login_title');
+add_filter('login_footer', 'joints_login_footer');
+add_filter('gettext', 'wpse17709_gettext', 10, 2);

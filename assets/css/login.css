@@ -14,10 +14,51 @@ http://codex.wordpress.org/Creating_Admin_Themes
 
 ******************************************************************/
 .login h1 a {
-  background: none!important;
-  width: 326px;
-  height: 67px;
-  text-indent: -9999px;
-  overflow: hidden;
-  padding-bottom: 15px;
-  display: block; }
+    background: none!important;
+    width: 326px;
+    height: 67px;
+    text-indent: -9999px;
+    overflow: hidden;
+    padding-bottom: 15px;
+    display: block; }
+
+form#loginform p label br, h1 a, p.forgetmenot, p#backtoblog { display:none!important; }
+h1.login-title {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+}
+form#loginform p label input, form#lostpasswordform p label input{
+    text-align:center;
+}
+.off-canvas-content {
+    background:#F8F7F7;
+}
+input#wp-submit{
+    border: 2px solid #000!important;
+    padding: 10px 40px;
+    color: #000!important;
+    border-radius: 28px;
+    font-size: 14px;
+    font-weight: 700;
+    background:#F8F7F7;
+}
+a.login-home.active{
+    color:#FCB131!important;
+}
+p#nav {
+    text-align: right;
+    padding: 0px 0px 10px;
+    font-size: 12px;
+    position: relative;
+    top: -60px;
+}
+p#nav a{
+    color: #FCB131;
+}
+p.submit {
+    text-align: center;
+    position: relative;
+    top: 20px;
+}
