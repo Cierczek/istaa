@@ -506,7 +506,7 @@ input.wpcf7-form-control.wpcf7-submit {
     border-radius: 28px;
     font-size: 14px;
     font-weight: 700;
-    background: #fff;
+    background: transparent;
 }
 @media(max-width: 460px){
     h2.members-title {
@@ -518,4 +518,48 @@ input.wpcf7-form-control.wpcf7-submit {
         margin-bottom: 40px;
         border-bottom: 1px solid;
     }
+}
+
+/*edit page*/
+.page-id-196 .off-canvas-content{
+    background:#F8F7F7;
+}
+input#updateuser{
+    border: 2px solid #000!important;
+    padding: 10px 40px;
+    color: #000!important;
+    border-radius: 28px;
+    font-size: 14px;
+    font-weight: 700;
+    background:transparent;
+}
+#edituser p label {
+    display: none!important;
+}
+#edituser {
+    width: 320px;
+    padding: 8% 0 0;
+    margin: auto;
+}
+#edituser p.form-submit{
+    text-align: center!important;
+}
+h1.login-title {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+}
+a.my-account{
+    float: left;
+    margin-top: 18px;
+    font-weight: 300;
+    padding: 7px 20px;
+    height: 34px;
+    border-right: 1px solid #cecece;
+    font-size: 14px;
+    color: #000;
+}
+a.my-account.active{
+    color: #FCB131!important;
 }

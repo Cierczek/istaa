@@ -10,9 +10,15 @@
         <div class="top-bar-right show-for-large" id="main-menu">
             <?php joints_top_nav(); ?>	
         </div>
+        <?php if (is_user_logged_in()) { ?>
+        <div class="login show-for-large">
+            <a href="<?= home_url(); ?>/my-account/" class="my-account">my account</a>
+        </div>
+        <?php }else{?>
         <div class="login show-for-large">
             <a href="<?= home_url(); ?>/wp-admin/" class="login-home">log in</a>
         </div>
+        <?php }?>
         <div class="social-media show-for-large">
             <a href="" class="facebook"><img src="<?= get_template_directory_uri(); ?>/assets/images/fb.png" /></a>
             <a href="" class="instagram"><img src="<?= get_template_directory_uri(); ?>//assets/images/instagram.png" /></a>

@@ -1,43 +1,58 @@
 <?php
+
 // Theme support options
-require_once(get_template_directory().'/assets/functions/theme-support.php'); 
+require_once(get_template_directory() . '/assets/functions/theme-support.php');
 
 // WP Head and other cleanup functions
-require_once(get_template_directory().'/assets/functions/cleanup.php'); 
+require_once(get_template_directory() . '/assets/functions/cleanup.php');
 
 // Register scripts and stylesheets
-require_once(get_template_directory().'/assets/functions/enqueue-scripts.php'); 
+require_once(get_template_directory() . '/assets/functions/enqueue-scripts.php');
 
 // Register custom menus and menu walkers
-require_once(get_template_directory().'/assets/functions/menu.php'); 
+require_once(get_template_directory() . '/assets/functions/menu.php');
 
 // Register sidebars/widget areas
-require_once(get_template_directory().'/assets/functions/sidebar.php'); 
+require_once(get_template_directory() . '/assets/functions/sidebar.php');
 
 // Makes WordPress comments suck less
-require_once(get_template_directory().'/assets/functions/comments.php'); 
+require_once(get_template_directory() . '/assets/functions/comments.php');
 
 // Replace 'older/newer' post links with numbered navigation
-require_once(get_template_directory().'/assets/functions/page-navi.php'); 
+require_once(get_template_directory() . '/assets/functions/page-navi.php');
 
 // Adds support for multiple languages
-require_once(get_template_directory().'/assets/translation/translation.php'); 
+require_once(get_template_directory() . '/assets/translation/translation.php');
 
+// Customize the WordPress login menu
+require_once(get_template_directory() . '/assets/functions/login.php');
 
 // Remove 4.2 Emoji Support
 // require_once(get_template_directory().'/assets/functions/disable-emoji.php'); 
-
 // Adds site styles to the WordPress editor
 //require_once(get_template_directory().'/assets/functions/editor-styles.php'); 
-
 // Related post function - no need to rely on plugins
 // require_once(get_template_directory().'/assets/functions/related-posts.php'); 
-
 // Use this as a template for custom post types
 // require_once(get_template_directory().'/assets/functions/custom-post-type.php');
-
-// Customize the WordPress login menu
-require_once(get_template_directory().'/assets/functions/login.php'); 
-
 // Customize the WordPress admin
 // require_once(get_template_directory().'/assets/functions/admin.php'); 
+//Add custom user role
+$active_role = add_role('active_role', __('Active'), array());
+$asociate_role = add_role('asociate_role', __('Asociate'), array());
+$partner_role = add_role('partner_role', __('Partner'), array());
+$affiliated_role = add_role('affiliated_role', __('Affiliated'), array());
+
+function admin_default_page() {
+    return '/istaa/my-account/';
+}
+
+add_filter('login_redirect', 'admin_default_page');
+
+function wpse_11244_restrict_admin() {
+    if (!current_user_can('manage_options') && $_SERVER['PHP_SELF'] != '/wp-admin/admin-ajax.php') {
+        wp_redirect(home_url());
+    }
+}
+
+add_action('admin_init', 'wpse_11244_restrict_admin', 1);

@@ -54,18 +54,14 @@ function new_wp_login_title() {
     return $x;
 }
 
-function hide_logo() {
-    echo '<style type="text/css">                                                                   
-
-            </style>';
-}
-
 function wpse17709_gettext($custom_translation, $login_texts) {
 
     if ('Log In' == $login_texts) {
         return 'enter';
     } // Login Button
-
+    
+     if ( 'Log in' == $login_texts ) { return 'Log in'; }
+     
     if ('Lost your password?' == $login_texts) {
         return 'Forgot password ?';
     } // Lost Password Link
@@ -75,14 +71,15 @@ function wpse17709_gettext($custom_translation, $login_texts) {
     } // Button
     
 
-    return $translation;
+    return $custom_translation;
 }
 
 // calling it only on the login page
 add_filter('login_message', 'new_wp_login_title');
-add_action('login_head', 'hide_logo');
 add_action('login_enqueue_scripts', 'joints_login_css', 10);
+
 add_filter('login_headerurl', 'joints_login_url');
 add_filter('login_headertitle', 'joints_login_title');
+
 add_filter('login_footer', 'joints_login_footer');
 add_filter('gettext', 'wpse17709_gettext', 10, 2);

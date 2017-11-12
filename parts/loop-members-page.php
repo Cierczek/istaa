@@ -5,9 +5,7 @@ $ndmembers = acf_photo_gallery('2nd-members', $post->ID);
 <article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article" itemscope itemtype="http://schema.org/WebPage">
 
     <section class="entry-content" itemprop="articleBody">
-        <div class="fd-img">
 
-        </div>
         <div class="content-container">
 
             <h2 class="members-title">1st kind of members</h2>
@@ -37,7 +35,8 @@ $ndmembers = acf_photo_gallery('2nd-members', $post->ID);
                 }
             }
             ?>
-
+        </div>
+        
     </section> <!-- end article section -->
 
     <footer class="article-footer">

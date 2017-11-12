@@ -35,13 +35,37 @@
 
         <!-- Drop Google Analytics here -->
         <!-- end analytics -->
-
+        <?php
+        $user = wp_get_current_user();
+        $role = $user->roles;
+        if ($role[0] == 'administrator') {
+            echo '
+                <style type="text/css">
+                #wpadminbar{ 
+                    display:block; 
+                }
+                html {
+                    margin-top: 32px;
+                }
+                </style>';
+        } else {
+            echo '
+            <style type="text/css">
+                #wpadminbar{ 
+                    display:none; 
+                }
+                html {
+                    margin-top: 0px!important;
+                }
+            </style> ';
+        }
+        ?>
     </head>
 
     <!-- Uncomment this line if using the Off-Canvas Menu --> 
 
     <body <?php body_class(); ?>>
-        
+
         <div class="off-canvas-wrapper">
 
             <?php get_template_part('parts/content', 'offcanvas'); ?>
@@ -53,6 +77,6 @@
                     <!-- This navs will be applied to the topbar, above all content 
                          To see additional nav styles, visit the /parts directory -->
                     <?php get_template_part('parts/nav', 'offcanvas-topbar'); ?>
-                    
+
 
                 </header> <!-- end .header -->

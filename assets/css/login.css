@@ -42,7 +42,7 @@ input#wp-submit{
     border-radius: 28px;
     font-size: 14px;
     font-weight: 700;
-    background:#F8F7F7;
+    background:transparent;
 }
 a.login-home.active{
     color:#FCB131!important;
@@ -57,8 +57,14 @@ p#nav {
 p#nav a{
     color: #FCB131;
 }
+input.text-input{
+    text-align: center;
+}
 p.submit {
     text-align: center;
     position: relative;
     top: 20px;
+}
+form#lostpasswordform p label, form#loginform p label {
+    font-size: 0;
 }

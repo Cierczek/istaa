@@ -54,6 +54,16 @@ if ($pageid == "6") {
 </div> <!-- end .off-canvas-wrapper -->
 
 <?php wp_footer(); ?>
-
+<script>
+    jQuery(document).ready(function () {
+    var a = location.pathname;
+    if( a == "/istaa/my-account/" ){ 
+    jQuery( "a.my-account" ).addClass( "active");
+    }
+    else{
+    jQuery( "a.my-account" ).removeClass( "active" );
+    } 
+    });
+</script>
 </body>
 </html> <!-- end page -->
