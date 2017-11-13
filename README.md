@@ -1,8 +1,8 @@
-##Istaa theme
+## Istaa theme
 
 Currently using Foundation 6.3.1.
 
-### Pre-baked with all of the great features that are found in the Foundation framework – simply put, if it works in Foundation, it will work in JointsWP. The theme also includes:
+### Pre-baked with all of the great features that are found in the Foundation framework – simply put, if it works in Foundation, it will work in Istaa. The theme also includes:
 
 - Foundation Navigation Options
 - Motion-UI
