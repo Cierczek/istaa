@@ -563,3 +563,94 @@ a.my-account{
 a.my-account.active{
     color: #FCB131!important;
 }
+
+/*my account*/
+.content-container.myaccount{
+    width: 950px;
+}
+h2.my-account-title {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    border-bottom: 1px solid #cecece;
+    padding-bottom: 8px;
+}
+h2.my-account-title a {
+    float: right;
+    font-weight: 400;
+    font-size: 11px;
+    color: #FCB131;
+}
+p.user-data, p.discipline {
+    padding-top: 6px;
+    font-size: 12px;
+    margin-bottom: 6px;
+}
+p.user-data a{
+    color: #FCB131!important;
+}
+p.user-data.member{
+    padding-top: 20px;
+    border-top: 1px solid #cecece;
+    text-transform: capitalize;
+}
+.tabs, .tabs-content{
+    margin: 0;
+    border: none!important;
+}
+.large-3.columns.mbm-profile {
+    padding: 0;
+}
+.large-9.columns.usr-notif-container{
+    max-width: 580px;
+    padding: 0;
+}
+ul#example-tabs {
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+.tabs-title>a{
+    background: transparent;
+    color: #326598!important;
+    border: 1px solid #326598;
+    padding: 10px 30px!important;
+    margin-right: 13px!important;
+    border-radius: 50px;
+    font-size: 12px!important;
+}
+.tabs-title>a:focus, .tabs-title>a[aria-selected=true] {
+    background: #326598!important;
+    color: #fff!important;
+}
+.large-6.columns.disciplines.first-disp {
+    padding: 72px 30px 0px 0px;
+}
+.large-6.columns.disciplines.sec-disp{
+    padding: 72px 0px 0px 30px;
+}
+span.date-notif {
+    font-weight: 500;
+    font-size: 14px!important;
+    color: #9b9b9b;
+}
+h3.post-title-notif {
+    line-height: 22px;
+    margin-bottom: 0;
+}
+.post-title-notif a{
+    font-weight: 500;
+    font-size: 18px!important;
+    color: #000;
+}
+.notif_excerpt{
+    margin-top: 5px;
+    font-size: 14px!important;
+    color: #4a4a4a;
+    font-weight: 400;
+}
+
+h2.my-account-edit-title {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}

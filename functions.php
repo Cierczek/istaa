@@ -56,3 +56,15 @@ function wpse_11244_restrict_admin() {
 }
 
 add_action('admin_init', 'wpse_11244_restrict_admin', 1);
+
+add_filter( 'gettext', 'wpse6096_gettext', 10, 2 );
+function wpse6096_gettext( $translation, $original )
+{
+    if ( 'First Name' == $original ) {
+        return 'Country';
+    }
+    if ( 'Last Name' == $original ) {
+        return 'Company';
+    }
+    return $translation;
+}

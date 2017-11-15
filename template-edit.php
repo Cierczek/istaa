@@ -42,6 +42,10 @@ if (is_user_logged_in()) {
             update_user_meta($current_user->ID, 'phone', esc_attr($_POST['phone']));
         if (!empty($_POST['contact_person']))
             update_user_meta($current_user->ID, 'contact_person', esc_attr($_POST['contact_person']));
+        if (!empty($_POST['sport_disciplines']))
+            update_user_meta($current_user->ID, 'sport_disciplines', $_POST['sport_disciplines']);
+        if (!empty($_POST['description_tags']))
+            update_user_meta($current_user->ID, 'description_tags', $_POST['description_tags']);
         
         if (count($error) == 0) {
             do_action('edit_user_profile_update', $current_user->ID);
