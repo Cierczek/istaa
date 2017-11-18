@@ -16,8 +16,7 @@
                     </p>
                 <?php } ?>
 
-                <!-- new code-->
-                 <h2 class="my-account-edit-title">Sport disciplines</h2>
+                <h2 class="my-account-edit-title">Sport disciplines</h2>
                 <?php
                 $field = get_field_object('field_5a0c01a7ca44e', $current_user);
                 echo '<select name="sport_disciplines[]" multiple>';
@@ -36,7 +35,6 @@
                 }
                 echo '</select>';
                 ?>
-                <!-- new code-->
 
                 <p class="form-password">
                     <label for="pass1"><?php _e('Password *', 'profile'); ?> </label>
@@ -47,12 +45,12 @@
                     <input class="text-input" name="pass2" type="password" id="pass2" placeholder="Repeat Password"/>
                 </p><!-- .form-password -->
 
-<?php
+                <?php
 //action hook for plugin and extra fields
-do_action('edit_user_profile', $current_user);
-?>
+                do_action('edit_user_profile', $current_user);
+                ?>
                 <p class="form-submit">
-                <?php echo $referer; ?>
+                    <?php echo $referer; ?>
                     <input name="updateuser" type="submit" id="updateuser" class="submit button" value="<?php _e('Update', 'profile'); ?>" />
                     <?php wp_nonce_field('update-user') ?>
                     <input name="action" type="hidden" id="action" value="update-user" />

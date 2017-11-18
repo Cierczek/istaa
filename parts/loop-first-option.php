@@ -22,6 +22,9 @@ $member = $user->roles ? $user->roles[0] : false;
         <p class="user-data">E-mail: <a href="mailto:<?php the_author_meta('user_email', $current_user); ?>"><?php the_author_meta('user_email', $current_user); ?></a></p>
         <p class="user-data">Contact person: <?= get_user_meta($current_user, 'contact_person', $single); ?></p>
         <p class="user-data">Phone: <?= get_user_meta($current_user, 'phone', $single); ?></p>
+        <div class="mbm-img">
+            <img src="<?= home_url() ?>/wp-content/themes/istaa/assets/images/<?= $member ?>.png"/>
+        </div>
     </div>
     <div class="large-9 columns usr-notif-container">
         <h2 class="my-account-title">Notifications</h2>
