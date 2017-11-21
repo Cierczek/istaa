@@ -161,23 +161,29 @@ $users = $user_query->get_results();
             <p class="user-data">E-mail: <a href="mailto:<?php the_author_meta('user_email', $user->ID); ?>"><?php the_author_meta('user_email', $user->ID); ?></a></p>
             <p class="user-data">Contact person: <?= get_user_meta($user->ID, 'contact_person', $single); ?></p>
             <p class="user-data">Phone: <?= get_user_meta($user->ID, 'phone', $single); ?></p>
-            <?php
-            echo '</div>';
+            <a href="./view-profile?userid=<?= $user->ID ?>" class="vp_button">View Profile <i class="fa fa-angle-right padding_left" aria-hidden="true"></i></a>
+                <?php
+                echo '</div>';
+            }
+        } else {
+            echo 'No users found';
         }
-    } else {
-        echo 'No users found';
-    }
-    ?>
+        ?>
 </div>
-
-
-
-
 
 <script type="text/javascript">
     jQuery(document).ready(function () {
         jQuery('.select_mem').on('change', function () {
             document.forms['form'].submit();
+        });
+
+        var dpNames = {};
+        jQuery("select > option").each(function () {
+            if (dpNames[this.text]) {
+                jQuery(this).remove();
+            } else {
+                dpNames[this.text] = this.value;
+            }
         });
     });
 </script>

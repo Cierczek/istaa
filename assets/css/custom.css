@@ -243,6 +243,7 @@ h2.latest-news span {
 /*BLOG*/
 body.blog h2.recent-title {
     line-height: 18px;
+    min-height: 80px;
 }
 body.blog h2.recent-title a {
     font-weight: 500;
@@ -691,20 +692,53 @@ form#filter-form select {
 select.select_mem {
     text-transform: capitalize;
 }
-.user-image-list {
-    min-height: 150px;
-    max-height: 150px;
-}
-.user-image-list img {
-    min-height: 150px;
-    max-height: 150px;
-}
+
 .large-3.columns.mbm-profile-list {
     margin-top: 50px;
+    overflow: hidden;
+    min-height: 600px;
+    float: left!important;
 }
 span.mem-logo {
     float: right;
 }
 .large-3.columns.mbm-profile-list.administrator {
     display: none;
+}
+
+.large-6.columns.view-profile.first-disp {
+    padding: 0px 30px 0px 0px;
+}
+.large-6.columns.view-profile.sec-disp{
+    padding: 0px 0px 0px 30px;
+}
+.vp_button{
+    color:#000!important;
+    font-size: 12px!important;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.fa.fa-angle-right.padding_left {
+    padding-left: 10px;
+}
+.container-article {
+    min-height: 400px!important;
+}
+.user-image-list, .post-image  {
+    position: relative;
+    width: 150px;
+    height: 200px;
+    overflow: hidden;
+    margin: auto;
+}
+.user-image-list img, .post-image img  {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    width: auto;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
 }
