@@ -4,7 +4,7 @@
 
         <div class="content-container myaccount">
             <ul class="tabs" data-tabs id="example-tabs">
-                <li class="tabs-title-per"><a data-tabs-target="pane1" href="http://dev.robertcierczek.es/istaa/my-account/" class="button-ta">dashboard</a></li>
+                <li class="tabs-title-per"><a data-tabs-target="pane1" href="./my-account/" class="button-ta">dashboard</a></li>
                 <li class="tabs-title is-active"><a data-tabs-target="pane2" href="#pane2">members directory</a></li>
                 <li class="tabs-title"><a data-tabs-target="pane3" href="#pane3">annual meetings</a></li>
                 <li class="tabs-title"><a data-tabs-target="pane4" href="#pane4">whatsapp group</a></li>

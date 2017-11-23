@@ -9,7 +9,7 @@ $member = $user->roles ? $user->roles[0] : false;
 ?>
 <div class="row">
     <div class="large-3 columns mbm-profile">
-        <h2 class="my-account-title">Member proile <a href="<?php home_url() ?>/istaa/edit-page/">Edit profle</a></h2>
+        <h2 class="my-account-title">Member proile <a href="./edit-page/">Edit profle</a></h2>
         <div class="user-image">
             <?php
             echo wp_get_attachment_image($image, $size);
@@ -45,7 +45,7 @@ $member = $user->roles ? $user->roles[0] : false;
         }
         ?>
         <div class="large-6 columns disciplines first-disp"> 
-            <h2 class="my-account-title">Sport disciplines <a href="<?php home_url() ?>/istaa/edit-page/">Edit</a></h2>
+            <h2 class="my-account-title">Sport disciplines <a href="./edit-page/">Edit</a></h2>
             <?php
             $disciplines = get_user_meta($current_user, 'sport_disciplines', $single);
 
@@ -55,7 +55,7 @@ $member = $user->roles ? $user->roles[0] : false;
             <?php } ?>
         </div>
         <div class="large-6 columns disciplines sec-disp"> 
-            <h2 class="my-account-title">Other description tags <a href="<?php home_url() ?>/istaa/edit-page/">Edit</a></h2>
+            <h2 class="my-account-title">Other description tags <a href="./edit-page/">Edit</a></h2>
             <?php
             $description_tags = get_user_meta($current_user, 'description_tags', $single);
 

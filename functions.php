@@ -44,7 +44,7 @@ $partner_role = add_role('partner_role', __('Partner'), array());
 $affiliated_role = add_role('affiliated_role', __('Affiliated'), array());
 
 function admin_default_page() {
-    return '/istaa/my-account/';
+    return './my-account/';
 }
 
 add_filter('login_redirect', 'admin_default_page');

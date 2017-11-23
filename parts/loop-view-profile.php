@@ -9,8 +9,8 @@ $member = $user->roles ? $user->roles[0] : false;
 ?>
 <div class="content-container myaccount">
     <ul class="tabs" data-tabs id="example-tabs">
-        <li class="tabs-title-per"><a data-tabs-target="pane1" href="http://dev.robertcierczek.es/istaa/my-account/" class="button-ta">dashboard</a></li>
-        <li class="tabs-title-per"><a data-tabs-target="pane2" href="http://dev.robertcierczek.es/istaa/membership-directory/" class="button-ta">member directory</a></li>
+        <li class="tabs-title-per"><a data-tabs-target="pane1" href="./my-account/" class="button-ta">dashboard</a></li>
+        <li class="tabs-title-per"><a data-tabs-target="pane2" href="./membership-directory/" class="button-ta">member directory</a></li>
         <li class="tabs-title"><a data-tabs-target="pane3" href="#pane3">annual meetings</a></li>
         <li class="tabs-title"><a data-tabs-target="pane4" href="#pane4">whatsapp group</a></li>
         <li class="tabs-title"><a data-tabs-target="pane5" href="#pane5">claims and reports</a></li>
