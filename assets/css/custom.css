@@ -742,3 +742,16 @@ span.mem-logo {
     -ms-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
 }
+.news-recent-title {
+    min-height: 76px;
+}
+.pagination .current {
+    background: #fcb235!important;
+}
+ul.pagination li a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+p.byline, div#comments {
+    display: none;
+}

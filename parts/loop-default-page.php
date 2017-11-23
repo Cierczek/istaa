@@ -25,7 +25,7 @@
                         $i++;
                         echo '<div class="large-6 columns recent-post-' . $i . ' last-post">'
                         . '<span class="date">' . date('j/n/Y', strtotime($recent['post_date'])) . '</span><br>'
-                        . '<a href="' . get_permalink($recent["ID"]) . '" class="recent-title">' . $recent["post_title"] . '</a>'
+                        . '<div class="news-recent-title"><a href="' . get_permalink($recent["ID"]) . '" class="recent-title">' . $recent["post_title"] . '</a></div>'
                         . '<p class="post_excerpt_last">' . $recent["post_excerpt"]
                         . '<a hrerf="' . get_permalink($recent["ID"]) . '" class="read-more"> read more</a></p>'
                         . ' </div> ';
